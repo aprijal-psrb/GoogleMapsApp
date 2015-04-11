@@ -2,19 +2,11 @@
  * Copyright (c) 2015 APRIJAL PASARIBU.
  */
 
-package com.asa.googlemaps;
+package com.asa.googlemapsapp;
 
 import android.app.Activity;
-import android.location.Location;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Toast;
-
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -41,14 +33,15 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
         googleMap.setMyLocationEnabled(true);
-        // latitude and longitude
 
+        // latitude and longitude Jakarta
         double latitude = -6.211544;
         double longitude = 106.845172;
-// create marker
+
+        // create marker
         MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("Hello Maps ");
 
-// adding marker
+        // adding marker
         googleMap.addMarker(marker);
 
         CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(latitude, longitude)).zoom(12).build();
